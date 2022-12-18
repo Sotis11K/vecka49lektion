@@ -8,13 +8,18 @@ body, html{
     padding: 0;
 }
 
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.border-bottom{
+    border-bottom: solid 10px black;
+}
 
 #page1{
     height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-image: url('../Images/0.png');
     background-size: cover;
     background-position: center;
@@ -37,7 +42,7 @@ body, html{
         font-size: 172px;
     }
     span{
-        bottom: 0;
+        bottom: 11px;
     }
     #txt{
         top: 70%;
@@ -50,33 +55,111 @@ body, html{
 
 #page2{
     height: 100vh;
-    border-top: solid 10px black;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 10px;
-    background-color: blue;
-    #text-page2{
-        background-color: yellow;
-        height: 200px;
-        grid-area: 1/0/span 2/span 4;
-    }
-    #candies{
-        background-color:purple;
-        height: max-content;
+    width: 100%;
+    background-color: #FFF9E9;
+    display: flex;
+    flex-flow: column wrap;
+    flex-wrap: wrap;
+    align-items: flex-end;
+            #text-page2{
+                flex-shrink: 9;
+                width: 35%;
+                padding: 20px;
+                height: 100%;
+                border-right: solid 10px black;
+                font-size: 36px;
+            }
+            #candies{
+                background-color:purple;
+                width: 65%;
+                height: 55%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
 
-    }
-    #bread{
-        background-color:pink;
-        height: max-content;
+            .combiner{
+                width: 65%;
+                height: 45%;
+                display: flex;
 
+                #bread{
+                    width: 40%;
+                    height: 100%;
+                    border-right: solid black 10px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                #text-desc{
+                    width: 60%;
+                    height: 100%;
+                }
+            }
+
+            
+
+
+            /*
+            #text-desc{
+                background-color:red;
+                position: absolute;
+                bottom: -999px;
+                right: 0;
+                height: 44.6%;
+                width: 35%;
+                flex-direction: row;
+                div{
+                    background-color: blue;
+                    height: 60%;
+                    width: 70%;
+                    font-size: 28px;
+                    color: white;
+                    text-align:center;
+                }
+            }*/
+}
+
+
+#page3{
+    height: 100vh;
+    background-color: #FFF9E9;
+    div{
+        height: 70%;
+        width: 50%;
+        gap: 8px;
+        #text-page3{
+            background-color: white;
+            height: 100%;
+            width: 50%;
+            flex-direction: column;
+            padding: 20px;
+            gap: 60px;
+            border-bottom: solid 10px black; 
+        }
+        #img-page3{
+            width: 50%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }    
+        }
     }
-    #text-desc p{
-        background-color:orange;
-        height: max-content;
-        color: white;
+}
+
+#page4{
+    height: 100vh;
+    background-color: white;
+    div{
+        height: 400px;
+        font-size: 28px;
+        line-height: 34px;
+        border-bottom: solid 1px black;
     }
-        
-    
 }
 
 img{
